@@ -16,6 +16,8 @@ roslaunch teleop.launch
 #in another terminal:
 cd RaspPiGroup3/teleop_ws
 source ./devel/setup.bash
+
+#testservont.py is the file the controls the car
 rosrun teleop_twist_joy testservont.py
 
 ```

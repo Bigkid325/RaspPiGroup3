@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/teleop_ws/src
+CMAKE_SOURCE_DIR = /home/khoa/RaspPiGroup3/teleop_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/teleop_ws/build
+CMAKE_BINARY_DIR = /home/khoa/RaspPiGroup3/teleop_ws/build
 
 # Utility rule file for _run_tests_teleop_twist_joy_roslint.
 
@@ -63,10 +63,10 @@ teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/build: _run_
 .PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/build
 
 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/clean:
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/cmake_clean.cmake
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/cmake_clean.cmake
 .PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/clean
 
 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/depend:
-	cd /home/ubuntu/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/teleop_ws/src /home/ubuntu/teleop_ws/src/teleop_twist_joy /home/ubuntu/teleop_ws/build /home/ubuntu/teleop_ws/build/teleop_twist_joy /home/ubuntu/teleop_ws/build/teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khoa/RaspPiGroup3/teleop_ws/src /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy /home/khoa/RaspPiGroup3/teleop_ws/build /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/depend
 

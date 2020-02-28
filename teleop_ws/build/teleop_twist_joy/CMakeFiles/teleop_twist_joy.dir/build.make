@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/teleop_ws/src
+CMAKE_SOURCE_DIR = /home/khoa/RaspPiGroup3/teleop_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/teleop_ws/build
+CMAKE_BINARY_DIR = /home/khoa/RaspPiGroup3/teleop_ws/build
 
 # Include any dependencies generated for this target.
 include teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/depend.make
@@ -58,17 +58,17 @@ include teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/progress.make
 include teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/flags.make
 
 teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o: teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/flags.make
-teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o: /home/ubuntu/teleop_ws/src/teleop_twist_joy/src/teleop_twist_joy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/teleop_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o"
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o -c /home/ubuntu/teleop_ws/src/teleop_twist_joy/src/teleop_twist_joy.cpp
+teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o: /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy/src/teleop_twist_joy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/khoa/RaspPiGroup3/teleop_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o"
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o -c /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy/src/teleop_twist_joy.cpp
 
 teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.i"
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/teleop_ws/src/teleop_twist_joy/src/teleop_twist_joy.cpp > CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.i
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy/src/teleop_twist_joy.cpp > CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.i
 
 teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.s"
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/teleop_ws/src/teleop_twist_joy/src/teleop_twist_joy.cpp -o CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.s
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy/src/teleop_twist_joy.cpp -o CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.s
 
 teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o.requires:
 
@@ -88,33 +88,33 @@ teleop_twist_joy_OBJECTS = \
 # External object files for target teleop_twist_joy
 teleop_twist_joy_EXTERNAL_OBJECTS =
 
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build.make
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/libroscpp.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/libboost_signals.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/librosconsole.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/liblog4cxx.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/libboost_regex.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/librostime.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/libcpp_common.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/libboost_system.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/libboost_thread.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/libboost_chrono.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/libboost_atomic.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/libpthread.so
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so.0.4
-/home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so: teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/teleop_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so"
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/teleop_twist_joy.dir/link.txt --verbose=$(VERBOSE)
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build.make
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/libroscpp.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/librosconsole.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/librostime.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /opt/ros/melodic/lib/libcpp_common.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so: teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/khoa/RaspPiGroup3/teleop_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so"
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/teleop_twist_joy.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build: /home/ubuntu/teleop_ws/devel/lib/libteleop_twist_joy.so
+teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build: /home/khoa/RaspPiGroup3/teleop_ws/devel/lib/libteleop_twist_joy.so
 
 .PHONY : teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build
 
@@ -123,10 +123,10 @@ teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/requires: teleop_twist_joy/CMak
 .PHONY : teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/requires
 
 teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/clean:
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -P CMakeFiles/teleop_twist_joy.dir/cmake_clean.cmake
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -P CMakeFiles/teleop_twist_joy.dir/cmake_clean.cmake
 .PHONY : teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/clean
 
 teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/depend:
-	cd /home/ubuntu/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/teleop_ws/src /home/ubuntu/teleop_ws/src/teleop_twist_joy /home/ubuntu/teleop_ws/build /home/ubuntu/teleop_ws/build/teleop_twist_joy /home/ubuntu/teleop_ws/build/teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khoa/RaspPiGroup3/teleop_ws/src /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy /home/khoa/RaspPiGroup3/teleop_ws/build /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/depend
 

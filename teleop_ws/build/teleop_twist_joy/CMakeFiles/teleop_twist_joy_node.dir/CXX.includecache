@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/teleop_ws/src/teleop_twist_joy/include/teleop_twist_joy/teleop_twist_joy.h
+/home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy/include/teleop_twist_joy/teleop_twist_joy.h
 
-/home/ubuntu/teleop_ws/src/teleop_twist_joy/src/teleop_node.cpp
+/home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy/src/teleop_node.cpp
 ros/ros.h
-/home/ubuntu/teleop_ws/src/teleop_twist_joy/src/ros/ros.h
+/home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy/src/ros/ros.h
 teleop_twist_joy/teleop_twist_joy.h
-/home/ubuntu/teleop_ws/src/teleop_twist_joy/src/teleop_twist_joy/teleop_twist_joy.h
+/home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy/src/teleop_twist_joy/teleop_twist_joy.h
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

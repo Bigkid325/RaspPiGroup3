@@ -67,14 +67,14 @@ set(teleop_twist_joy_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(teleop_twist_joy_SOURCE_PREFIX /home/ubuntu/teleop_ws/src/teleop_twist_joy)
-  set(teleop_twist_joy_DEVEL_PREFIX /home/ubuntu/teleop_ws/devel)
+  set(teleop_twist_joy_SOURCE_PREFIX /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy)
+  set(teleop_twist_joy_DEVEL_PREFIX /home/khoa/RaspPiGroup3/teleop_ws/devel)
   set(teleop_twist_joy_INSTALL_PREFIX "")
   set(teleop_twist_joy_PREFIX ${teleop_twist_joy_DEVEL_PREFIX})
 else()
   set(teleop_twist_joy_SOURCE_PREFIX "")
   set(teleop_twist_joy_DEVEL_PREFIX "")
-  set(teleop_twist_joy_INSTALL_PREFIX /home/ubuntu/teleop_ws/install)
+  set(teleop_twist_joy_INSTALL_PREFIX /home/khoa/RaspPiGroup3/teleop_ws/install)
   set(teleop_twist_joy_PREFIX ${teleop_twist_joy_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ubuntu/teleop_ws/install/lib;/opt/ros/melodic/lib)
+    foreach(path /home/khoa/RaspPiGroup3/teleop_ws/install/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

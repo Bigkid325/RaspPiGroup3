@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/teleop_ws/src
+CMAKE_SOURCE_DIR = /home/khoa/RaspPiGroup3/teleop_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/teleop_ws/build
+CMAKE_BINARY_DIR = /home/khoa/RaspPiGroup3/teleop_ws/build
 
 # Utility rule file for run_tests_teleop_twist_joy_rostest_test_differential_joy.test.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/teleop_ws/build
 include teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/progress.make
 
 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test:
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/ubuntu/teleop_ws/build/test_results/teleop_twist_joy/rostest-test_differential_joy.xml "/opt/ros/melodic/share/rostest/cmake/../../../bin/rostest --pkgdir=/home/ubuntu/teleop_ws/src/teleop_twist_joy --package=teleop_twist_joy --results-filename test_differential_joy.xml --results-base-dir \"/home/ubuntu/teleop_ws/build/test_results\" /home/ubuntu/teleop_ws/src/teleop_twist_joy/test/differential_joy.test "
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/khoa/RaspPiGroup3/teleop_ws/build/test_results/teleop_twist_joy/rostest-test_differential_joy.xml "/opt/ros/melodic/share/rostest/cmake/../../../bin/rostest --pkgdir=/home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy --package=teleop_twist_joy --results-filename test_differential_joy.xml --results-base-dir \"/home/khoa/RaspPiGroup3/teleop_ws/build/test_results\" /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy/test/differential_joy.test "
 
 run_tests_teleop_twist_joy_rostest_test_differential_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test
 run_tests_teleop_twist_joy_rostest_test_differential_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/build.make
@@ -67,10 +67,10 @@ teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential
 .PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/build
 
 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/clean:
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/cmake_clean.cmake
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/cmake_clean.cmake
 .PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/clean
 
 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/depend:
-	cd /home/ubuntu/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/teleop_ws/src /home/ubuntu/teleop_ws/src/teleop_twist_joy /home/ubuntu/teleop_ws/build /home/ubuntu/teleop_ws/build/teleop_twist_joy /home/ubuntu/teleop_ws/build/teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khoa/RaspPiGroup3/teleop_ws/src /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy /home/khoa/RaspPiGroup3/teleop_ws/build /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/depend
 

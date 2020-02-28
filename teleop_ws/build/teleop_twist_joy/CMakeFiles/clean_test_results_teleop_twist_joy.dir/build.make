@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/teleop_ws/src
+CMAKE_SOURCE_DIR = /home/khoa/RaspPiGroup3/teleop_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/teleop_ws/build
+CMAKE_BINARY_DIR = /home/khoa/RaspPiGroup3/teleop_ws/build
 
 # Utility rule file for clean_test_results_teleop_twist_joy.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/teleop_ws/build
 include teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/progress.make
 
 teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy:
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && /usr/bin/python3 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/teleop_ws/build/test_results/teleop_twist_joy
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/khoa/RaspPiGroup3/teleop_ws/build/test_results/teleop_twist_joy
 
 clean_test_results_teleop_twist_joy: teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy
 clean_test_results_teleop_twist_joy: teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/build.make
@@ -67,10 +67,10 @@ teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/build: clean
 .PHONY : teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/build
 
 teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/clean:
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_teleop_twist_joy.dir/cmake_clean.cmake
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_teleop_twist_joy.dir/cmake_clean.cmake
 .PHONY : teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/clean
 
 teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/depend:
-	cd /home/ubuntu/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/teleop_ws/src /home/ubuntu/teleop_ws/src/teleop_twist_joy /home/ubuntu/teleop_ws/build /home/ubuntu/teleop_ws/build/teleop_twist_joy /home/ubuntu/teleop_ws/build/teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khoa/RaspPiGroup3/teleop_ws/src /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy /home/khoa/RaspPiGroup3/teleop_ws/build /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/depend
 

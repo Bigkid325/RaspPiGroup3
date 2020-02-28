@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/teleop_ws/install
+prefix=/home/khoa/RaspPiGroup3/teleop_ws/install
 
 Name: teleop_twist_joy
 Description: Description of teleop_twist_joy

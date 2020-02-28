@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/teleop_ws/src
+CMAKE_SOURCE_DIR = /home/khoa/RaspPiGroup3/teleop_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/teleop_ws/build
+CMAKE_BINARY_DIR = /home/khoa/RaspPiGroup3/teleop_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -101,6 +101,17 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -112,17 +123,6 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -137,14 +137,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ubuntu/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/teleop_ws/build/CMakeFiles /home/ubuntu/teleop_ws/build/teleop_twist_joy/CMakeFiles/progress.marks
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/teleop_ws/build/CMakeFiles 0
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/khoa/RaspPiGroup3/teleop_ws/build/CMakeFiles /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy/CMakeFiles/progress.marks
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khoa/RaspPiGroup3/teleop_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/clean
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,667 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/preinstall
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/preinstall
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ubuntu/teleop_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/build
-.PHONY : run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/build
-.PHONY : run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
-
-# Convenience name for target.
-_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
-
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test
-
-# fast build rule for target.
-_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/build
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/build
-.PHONY : run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/build
-.PHONY : run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/build
-.PHONY : run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
-
-# Convenience name for target.
-_run_tests_teleop_twist_joy_rostest_test_differential_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
-
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_differential_joy.test
-
-# fast build rule for target.
-_run_tests_teleop_twist_joy_rostest_test_differential_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/build
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_differential_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_rostest: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_rostest
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_rostest/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/build
-.PHONY : run_tests_teleop_twist_joy_rostest/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
-
-# Convenience name for target.
-_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
-
-.PHONY : _run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch
-
-# fast build rule for target.
-_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/build
-.PHONY : _run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/rule
-
-# Convenience name for target.
-_run_tests_teleop_twist_joy_roslaunch-check: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/rule
-
-.PHONY : _run_tests_teleop_twist_joy_roslaunch-check
-
-# fast build rule for target.
-_run_tests_teleop_twist_joy_roslaunch-check/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/build
-.PHONY : _run_tests_teleop_twist_joy_roslaunch-check/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_roslaunch-check: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_roslaunch-check
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_roslaunch-check/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/build
-.PHONY : run_tests_teleop_twist_joy_roslaunch-check/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_rostest_test_differential_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_rostest_test_differential_joy.test
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_rostest_test_differential_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/build
-.PHONY : run_tests_teleop_twist_joy_rostest_test_differential_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/build.make teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy
-
-# fast build rule for target.
-run_tests_teleop_twist_joy/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/build
-.PHONY : run_tests_teleop_twist_joy/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/build
-.PHONY : run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/build.make teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/rule
-
-# Convenience name for target.
-_run_tests_teleop_twist_joy_rostest: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/rule
-
-.PHONY : _run_tests_teleop_twist_joy_rostest
-
-# fast build rule for target.
-_run_tests_teleop_twist_joy_rostest/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/build
-.PHONY : _run_tests_teleop_twist_joy_rostest/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
-
-# Convenience name for target.
-_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
-
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test
-
-# fast build rule for target.
-_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/build
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/build.make teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/build
-.PHONY : run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_roslint_package: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_roslint_package
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_roslint_package/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/build
-.PHONY : run_tests_teleop_twist_joy_roslint_package/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
-
-# Convenience name for target.
-_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
-
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test
-
-# fast build rule for target.
-_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/build
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
-
-# Convenience name for target.
-_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
-
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test
-
-# fast build rule for target.
-_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/build
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/roslint.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roslint.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/roslint.dir/rule
-
-# Convenience name for target.
-roslint: teleop_twist_joy/CMakeFiles/roslint.dir/rule
-
-.PHONY : roslint
-
-# fast build rule for target.
-roslint/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roslint.dir/build.make teleop_twist_joy/CMakeFiles/roslint.dir/build
-.PHONY : roslint/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/rule
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/rule
 .PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/rule
 
 # Convenience name for target.
@@ -824,12 +179,87 @@ _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_
 
 # fast build rule for target.
 _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/build
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/build
 .PHONY : _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test/fast
 
 # Convenience name for target.
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
+
+# Convenience name for target.
+run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
+
+.PHONY : run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test
+
+# fast build rule for target.
+run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/build
+.PHONY : run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
+
+# Convenience name for target.
+_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
+
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test
+
+# fast build rule for target.
+_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/build
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
+
+# Convenience name for target.
+run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/rule
+
+.PHONY : run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test
+
+# fast build rule for target.
+run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test.dir/build
+.PHONY : run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
+
+# Convenience name for target.
+_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
+
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test
+
+# fast build rule for target.
+_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/build
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
+
+# Convenience name for target.
+run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
+
+.PHONY : run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test
+
+# fast build rule for target.
+run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/build
+.PHONY : run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test/fast
+
+# Convenience name for target.
 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule
 .PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule
 
 # Convenience name for target.
@@ -839,162 +269,117 @@ _run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test: teleop_twist_joy/CMak
 
 # fast build rule for target.
 _run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/build
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/build
 .PHONY : _run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test/fast
 
 # Convenience name for target.
-teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/rule
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule
 
 # Convenience name for target.
-clean_test_results_teleop_twist_joy: teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/rule
+run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/rule
 
-.PHONY : clean_test_results_teleop_twist_joy
+.PHONY : run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test
 
 # fast build rule for target.
-clean_test_results_teleop_twist_joy/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/build
-.PHONY : clean_test_results_teleop_twist_joy/fast
+run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test.dir/build
+.PHONY : run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test/fast
 
 # Convenience name for target.
-teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
 
 # Convenience name for target.
-sensor_msgs_generate_messages_lisp: teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
 
-.PHONY : sensor_msgs_generate_messages_lisp
+.PHONY : run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test
 
 # fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
+run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/build
+.PHONY : run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test/fast
 
 # Convenience name for target.
-teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/rule
 
 # Convenience name for target.
-sensor_msgs_generate_messages_py: teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+run_tests_teleop_twist_joy_rostest: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/rule
 
-.PHONY : sensor_msgs_generate_messages_py
+.PHONY : run_tests_teleop_twist_joy_rostest
 
 # fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
+run_tests_teleop_twist_joy_rostest/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest.dir/build
+.PHONY : run_tests_teleop_twist_joy_rostest/fast
 
 # Convenience name for target.
-teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/rule
+teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
 
 # Convenience name for target.
-teleop_twist_joy: teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/rule
+_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
 
-.PHONY : teleop_twist_joy
+.PHONY : _run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch
 
 # fast build rule for target.
-teleop_twist_joy/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build
-.PHONY : teleop_twist_joy/fast
+_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/build
+.PHONY : _run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch/fast
 
 # Convenience name for target.
-teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/rule
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
 
 # Convenience name for target.
-teleop_twist_joy_node: teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/rule
+run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/rule
 
-.PHONY : teleop_twist_joy_node
+.PHONY : run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch
 
 # fast build rule for target.
-teleop_twist_joy_node/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/build
-.PHONY : teleop_twist_joy_node/fast
+run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch.dir/build
+.PHONY : run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch/fast
 
 # Convenience name for target.
-teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
+teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
-_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
+roscpp_generate_messages_py: teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test
+.PHONY : roscpp_generate_messages_py
 
 # fast build rule for target.
-_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/build
-.PHONY : _run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test/fast
+roscpp_generate_messages_py/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/build.make teleop_twist_joy/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
-teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+std_msgs_generate_messages_py: teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_py
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/rule
-
-# Convenience name for target.
-roslint_teleop_twist_joy: teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/rule
-
-.PHONY : roslint_teleop_twist_joy
-
-# fast build rule for target.
-roslint_teleop_twist_joy/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/build
-.PHONY : roslint_teleop_twist_joy/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/rule
-
-# Convenience name for target.
-_run_tests_teleop_twist_joy: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/rule
-
-.PHONY : _run_tests_teleop_twist_joy
-
-# fast build rule for target.
-_run_tests_teleop_twist_joy/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/build
-.PHONY : _run_tests_teleop_twist_joy/fast
-
-# Convenience name for target.
-teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/rule
-.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/rule
-
-# Convenience name for target.
-run_tests_teleop_twist_joy_roslint: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/rule
-
-.PHONY : run_tests_teleop_twist_joy_roslint
-
-# fast build rule for target.
-run_tests_teleop_twist_joy_roslint/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/build
-.PHONY : run_tests_teleop_twist_joy_roslint/fast
+std_msgs_generate_messages_py/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/build.make teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/rule
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/rule
 .PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/rule
 
 # Convenience name for target.
@@ -1004,12 +389,102 @@ _run_tests_teleop_twist_joy_roslint: teleop_twist_joy/CMakeFiles/_run_tests_tele
 
 # fast build rule for target.
 _run_tests_teleop_twist_joy_roslint/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/build
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint.dir/build
 .PHONY : _run_tests_teleop_twist_joy_roslint/fast
 
 # Convenience name for target.
+teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
+
+# Convenience name for target.
+_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/rule
+
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test
+
+# fast build rule for target.
+_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test.dir/build
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_eus: teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_eus
+
+# fast build rule for target.
+geometry_msgs_generate_messages_eus/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+.PHONY : geometry_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_nodejs: teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+.PHONY : roscpp_generate_messages_nodejs
+
+# fast build rule for target.
+roscpp_generate_messages_nodejs/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make teleop_twist_joy/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+.PHONY : roscpp_generate_messages_nodejs/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+.PHONY : roscpp_generate_messages_eus
+
+# fast build rule for target.
+roscpp_generate_messages_eus/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/build.make teleop_twist_joy/CMakeFiles/roscpp_generate_messages_eus.dir/build
+.PHONY : roscpp_generate_messages_eus/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
+
+# Convenience name for target.
+_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/rule
+
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test
+
+# fast build rule for target.
+_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test.dir/build
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/rule
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/rule
 .PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/rule
 
 # Convenience name for target.
@@ -1019,12 +494,492 @@ run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_m
 
 # fast build rule for target.
 run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/build
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test.dir/build
 .PHONY : run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test/fast
 
 # Convenience name for target.
+teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_lisp: teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : std_msgs_generate_messages_lisp
+
+# fast build rule for target.
+std_msgs_generate_messages_lisp/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/rule
+
+# Convenience name for target.
+_run_tests_teleop_twist_joy_roslaunch-check: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/rule
+
+.PHONY : _run_tests_teleop_twist_joy_roslaunch-check
+
+# fast build rule for target.
+_run_tests_teleop_twist_joy_roslaunch-check/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslaunch-check.dir/build
+.PHONY : _run_tests_teleop_twist_joy_roslaunch-check/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_nodejs/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/roslint.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roslint.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/roslint.dir/rule
+
+# Convenience name for target.
+roslint: teleop_twist_joy/CMakeFiles/roslint.dir/rule
+
+.PHONY : roslint
+
+# fast build rule for target.
+roslint/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roslint.dir/build.make teleop_twist_joy/CMakeFiles/roslint.dir/build
+.PHONY : roslint/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make teleop_twist_joy/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_lisp: teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_py: teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make teleop_twist_joy/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_eus/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+.PHONY : rosgraph_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/rule
+
+# Convenience name for target.
+_run_tests_teleop_twist_joy_rostest: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/rule
+
+.PHONY : _run_tests_teleop_twist_joy_rostest
+
+# fast build rule for target.
+_run_tests_teleop_twist_joy_rostest/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest.dir/build
+.PHONY : _run_tests_teleop_twist_joy_rostest/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make teleop_twist_joy/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make teleop_twist_joy/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make teleop_twist_joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
+
+# Convenience name for target.
+run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/rule
+
+.PHONY : run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test
+
+# fast build rule for target.
+run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test.dir/build
+.PHONY : run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+geometry_msgs_generate_messages_nodejs/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make teleop_twist_joy/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+.PHONY : geometry_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/rule
+
+# Convenience name for target.
+run_tests_teleop_twist_joy_roslint_package: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/rule
+
+.PHONY : run_tests_teleop_twist_joy_roslint_package
+
+# fast build rule for target.
+run_tests_teleop_twist_joy_roslint_package/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/build
+.PHONY : run_tests_teleop_twist_joy_roslint_package/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
+
+# Convenience name for target.
+_run_tests_teleop_twist_joy_rostest_test_differential_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
+
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_differential_joy.test
+
+# fast build rule for target.
+_run_tests_teleop_twist_joy_rostest_test_differential_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/build
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_differential_joy.test/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/rule
+
+# Convenience name for target.
+teleop_twist_joy: teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/rule
+
+.PHONY : teleop_twist_joy
+
+# fast build rule for target.
+teleop_twist_joy/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build
+.PHONY : teleop_twist_joy/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/rule
+
+# Convenience name for target.
+run_tests_teleop_twist_joy_roslaunch-check: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/rule
+
+.PHONY : run_tests_teleop_twist_joy_roslaunch-check
+
+# fast build rule for target.
+run_tests_teleop_twist_joy_roslaunch-check/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslaunch-check.dir/build
+.PHONY : run_tests_teleop_twist_joy_roslaunch-check/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/rule
+
+# Convenience name for target.
+run_tests_teleop_twist_joy_roslint: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/rule
+
+.PHONY : run_tests_teleop_twist_joy_roslint
+
+# fast build rule for target.
+run_tests_teleop_twist_joy_roslint/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint.dir/build
+.PHONY : run_tests_teleop_twist_joy_roslint/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/rule
+
+# Convenience name for target.
+teleop_twist_joy_node: teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/rule
+
+.PHONY : teleop_twist_joy_node
+
+# fast build rule for target.
+teleop_twist_joy_node/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/build
+.PHONY : teleop_twist_joy_node/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/rule
+
+# Convenience name for target.
+roslint_teleop_twist_joy: teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/rule
+
+.PHONY : roslint_teleop_twist_joy
+
+# fast build rule for target.
+roslint_teleop_twist_joy/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/roslint_teleop_twist_joy.dir/build
+.PHONY : roslint_teleop_twist_joy/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
+
+# Convenience name for target.
+_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/rule
+
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test
+
+# fast build rule for target.
+_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test.dir/build
+.PHONY : _run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/rule
+
+# Convenience name for target.
+_run_tests_teleop_twist_joy: teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/rule
+
+.PHONY : _run_tests_teleop_twist_joy
+
+# fast build rule for target.
+_run_tests_teleop_twist_joy/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy.dir/build
+.PHONY : _run_tests_teleop_twist_joy/fast
+
+# Convenience name for target.
 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint_package.dir/rule:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint_package.dir/rule
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint_package.dir/rule
 .PHONY : teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint_package.dir/rule
 
 # Convenience name for target.
@@ -1034,8 +989,53 @@ _run_tests_teleop_twist_joy_roslint_package: teleop_twist_joy/CMakeFiles/_run_te
 
 # fast build rule for target.
 _run_tests_teleop_twist_joy_roslint_package/fast:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint_package.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint_package.dir/build
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint_package.dir/build.make teleop_twist_joy/CMakeFiles/_run_tests_teleop_twist_joy_roslint_package.dir/build
 .PHONY : _run_tests_teleop_twist_joy_roslint_package/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
+
+# Convenience name for target.
+run_tests_teleop_twist_joy_rostest_test_differential_joy.test: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/rule
+
+.PHONY : run_tests_teleop_twist_joy_rostest_test_differential_joy.test
+
+# fast build rule for target.
+run_tests_teleop_twist_joy_rostest_test_differential_joy.test/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_rostest_test_differential_joy.test.dir/build
+.PHONY : run_tests_teleop_twist_joy_rostest_test_differential_joy.test/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/rule
+
+# Convenience name for target.
+run_tests_teleop_twist_joy: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/rule
+
+.PHONY : run_tests_teleop_twist_joy
+
+# fast build rule for target.
+run_tests_teleop_twist_joy/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy.dir/build
+.PHONY : run_tests_teleop_twist_joy/fast
+
+# Convenience name for target.
+teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/rule:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f CMakeFiles/Makefile2 teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/rule
+.PHONY : teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/rule
+
+# Convenience name for target.
+clean_test_results_teleop_twist_joy: teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/rule
+
+.PHONY : clean_test_results_teleop_twist_joy
+
+# fast build rule for target.
+clean_test_results_teleop_twist_joy/fast:
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/clean_test_results_teleop_twist_joy.dir/build
+.PHONY : clean_test_results_teleop_twist_joy/fast
 
 src/teleop_node.o: src/teleop_node.cpp.o
 
@@ -1043,7 +1043,7 @@ src/teleop_node.o: src/teleop_node.cpp.o
 
 # target to build an object file
 src/teleop_node.cpp.o:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/src/teleop_node.cpp.o
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/src/teleop_node.cpp.o
 .PHONY : src/teleop_node.cpp.o
 
 src/teleop_node.i: src/teleop_node.cpp.i
@@ -1052,7 +1052,7 @@ src/teleop_node.i: src/teleop_node.cpp.i
 
 # target to preprocess a source file
 src/teleop_node.cpp.i:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/src/teleop_node.cpp.i
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/src/teleop_node.cpp.i
 .PHONY : src/teleop_node.cpp.i
 
 src/teleop_node.s: src/teleop_node.cpp.s
@@ -1061,7 +1061,7 @@ src/teleop_node.s: src/teleop_node.cpp.s
 
 # target to generate assembly for a file
 src/teleop_node.cpp.s:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/src/teleop_node.cpp.s
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy_node.dir/src/teleop_node.cpp.s
 .PHONY : src/teleop_node.cpp.s
 
 src/teleop_twist_joy.o: src/teleop_twist_joy.cpp.o
@@ -1070,7 +1070,7 @@ src/teleop_twist_joy.o: src/teleop_twist_joy.cpp.o
 
 # target to build an object file
 src/teleop_twist_joy.cpp.o:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.o
 .PHONY : src/teleop_twist_joy.cpp.o
 
 src/teleop_twist_joy.i: src/teleop_twist_joy.cpp.i
@@ -1079,7 +1079,7 @@ src/teleop_twist_joy.i: src/teleop_twist_joy.cpp.i
 
 # target to preprocess a source file
 src/teleop_twist_joy.cpp.i:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.i
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.i
 .PHONY : src/teleop_twist_joy.cpp.i
 
 src/teleop_twist_joy.s: src/teleop_twist_joy.cpp.s
@@ -1088,7 +1088,7 @@ src/teleop_twist_joy.s: src/teleop_twist_joy.cpp.s
 
 # target to generate assembly for a file
 src/teleop_twist_joy.cpp.s:
-	cd /home/ubuntu/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.s
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(MAKE) -f teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/build.make teleop_twist_joy/CMakeFiles/teleop_twist_joy.dir/src/teleop_twist_joy.cpp.s
 .PHONY : src/teleop_twist_joy.cpp.s
 
 # Help Target
@@ -1101,67 +1101,67 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... test"
+	@echo "... _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test"
 	@echo "... run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test"
+	@echo "... _run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test"
 	@echo "... run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test"
 	@echo "... _run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test"
-	@echo "... run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test"
 	@echo "... run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test"
-	@echo "... install/local"
+	@echo "... _run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test"
+	@echo "... run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test"
+	@echo "... edit_cache"
 	@echo "... run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test"
-	@echo "... _run_tests_teleop_twist_joy_rostest_test_differential_joy.test"
 	@echo "... run_tests_teleop_twist_joy_rostest"
 	@echo "... _run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch"
-	@echo "... _run_tests_teleop_twist_joy_roslaunch-check"
-	@echo "... run_tests_teleop_twist_joy_roslaunch-check"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... run_tests_teleop_twist_joy_rostest_test_differential_joy.test"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... edit_cache"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... run_tests_teleop_twist_joy"
 	@echo "... run_tests_teleop_twist_joy_roslaunch-check_launch_teleop.launch"
 	@echo "... roscpp_generate_messages_py"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... _run_tests_teleop_twist_joy_rostest"
-	@echo "... geometry_msgs_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... _run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test"
-	@echo "... run_tests_teleop_twist_joy_roslint_package"
-	@echo "... geometry_msgs_generate_messages_nodejs"
-	@echo "... _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test"
-	@echo "... _run_tests_teleop_twist_joy_rostest_test_only_turbo_joy.test"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... rebuild_cache"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... roslint"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test"
-	@echo "... _run_tests_teleop_twist_joy_rostest_test_six_dof_joy.test"
-	@echo "... clean_test_results_teleop_twist_joy"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... teleop_twist_joy"
-	@echo "... teleop_twist_joy_node"
-	@echo "... _run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... roslint_teleop_twist_joy"
-	@echo "... _run_tests_teleop_twist_joy"
-	@echo "... run_tests_teleop_twist_joy_roslint"
 	@echo "... _run_tests_teleop_twist_joy_roslint"
+	@echo "... _run_tests_teleop_twist_joy_rostest_test_holonomic_joy.test"
+	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... roscpp_generate_messages_nodejs"
+	@echo "... roscpp_generate_messages_eus"
+	@echo "... _run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy.test"
+	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... run_tests_teleop_twist_joy_rostest_test_turbo_angular_enable_joy_with_rosparam_map.test"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... _run_tests_teleop_twist_joy_roslaunch-check"
+	@echo "... std_msgs_generate_messages_eus"
+	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... rosgraph_msgs_generate_messages_py"
+	@echo "... roslint"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... _run_tests_teleop_twist_joy_rostest"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... install/local"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... rebuild_cache"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... run_tests_teleop_twist_joy_rostest_test_turbo_enable_joy.test"
+	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... run_tests_teleop_twist_joy_roslint_package"
+	@echo "... _run_tests_teleop_twist_joy_rostest_test_differential_joy.test"
+	@echo "... teleop_twist_joy"
+	@echo "... run_tests_teleop_twist_joy_roslaunch-check"
+	@echo "... run_tests_teleop_twist_joy_roslint"
+	@echo "... teleop_twist_joy_node"
+	@echo "... roslint_teleop_twist_joy"
+	@echo "... _run_tests_teleop_twist_joy_rostest_test_no_enable_joy.test"
+	@echo "... _run_tests_teleop_twist_joy"
 	@echo "... _run_tests_teleop_twist_joy_roslint_package"
+	@echo "... run_tests_teleop_twist_joy_rostest_test_differential_joy.test"
+	@echo "... run_tests_teleop_twist_joy"
+	@echo "... clean_test_results_teleop_twist_joy"
 	@echo "... src/teleop_node.o"
 	@echo "... src/teleop_node.i"
 	@echo "... src/teleop_node.s"
@@ -1179,6 +1179,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ubuntu/teleop_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

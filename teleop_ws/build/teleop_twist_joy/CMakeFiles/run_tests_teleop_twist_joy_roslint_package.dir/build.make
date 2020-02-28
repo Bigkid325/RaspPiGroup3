@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/teleop_ws/src
+CMAKE_SOURCE_DIR = /home/khoa/RaspPiGroup3/teleop_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/teleop_ws/build
+CMAKE_BINARY_DIR = /home/khoa/RaspPiGroup3/teleop_ws/build
 
 # Utility rule file for run_tests_teleop_twist_joy_roslint_package.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/teleop_ws/build
 include teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/progress.make
 
 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package:
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/ubuntu/teleop_ws/build/test_results/teleop_twist_joy/roslint-teleop_twist_joy.xml --working-dir /home/ubuntu/teleop_ws/build/teleop_twist_joy "/opt/ros/melodic/share/roslint/cmake/../../../lib/roslint/test_wrapper /home/ubuntu/teleop_ws/build/test_results/teleop_twist_joy/roslint-teleop_twist_joy.xml make roslint_teleop_twist_joy"
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/run_tests.py /home/khoa/RaspPiGroup3/teleop_ws/build/test_results/teleop_twist_joy/roslint-teleop_twist_joy.xml --working-dir /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy "/opt/ros/melodic/share/roslint/cmake/../../../lib/roslint/test_wrapper /home/khoa/RaspPiGroup3/teleop_ws/build/test_results/teleop_twist_joy/roslint-teleop_twist_joy.xml make roslint_teleop_twist_joy"
 
 run_tests_teleop_twist_joy_roslint_package: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package
 run_tests_teleop_twist_joy_roslint_package: teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/build.make
@@ -67,10 +67,10 @@ teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/build
 .PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/build
 
 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/clean:
-	cd /home/ubuntu/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/cmake_clean.cmake
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy && $(CMAKE_COMMAND) -P CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/cmake_clean.cmake
 .PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/clean
 
 teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/depend:
-	cd /home/ubuntu/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/teleop_ws/src /home/ubuntu/teleop_ws/src/teleop_twist_joy /home/ubuntu/teleop_ws/build /home/ubuntu/teleop_ws/build/teleop_twist_joy /home/ubuntu/teleop_ws/build/teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/khoa/RaspPiGroup3/teleop_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/khoa/RaspPiGroup3/teleop_ws/src /home/khoa/RaspPiGroup3/teleop_ws/src/teleop_twist_joy /home/khoa/RaspPiGroup3/teleop_ws/build /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy /home/khoa/RaspPiGroup3/teleop_ws/build/teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : teleop_twist_joy/CMakeFiles/run_tests_teleop_twist_joy_roslint_package.dir/depend
 

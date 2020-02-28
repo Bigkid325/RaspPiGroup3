@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "geometry_msgs;roscpp;sensor_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lteleop_twist_joy".split(';') if "-lteleop_twist_joy" != "" else []
 PROJECT_NAME = "teleop_twist_joy"
-PROJECT_SPACE_DIR = "/home/ubuntu/teleop_ws/install"
+PROJECT_SPACE_DIR = "/home/khoa/RaspPiGroup3/teleop_ws/install"
 PROJECT_VERSION = "0.1.3"

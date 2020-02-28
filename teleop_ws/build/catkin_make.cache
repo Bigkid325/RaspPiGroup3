@@ -1,0 +1,2 @@
+teleop_twist_joy
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/teleop_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/teleop_ws/install -G Unix Makefiles

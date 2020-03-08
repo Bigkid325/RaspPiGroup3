@@ -17,6 +17,15 @@ roslaunch teleop.launch
 cd RaspPiGroup3/teleop_ws
 source ./devel/setup.bash
 
+#in third terminal:
+cd RaspPiGroup3
+mkdir ~/bagfiles
+cd ~/bagfiles
+rosbag record -a
+
+#run bag2csv.py file in third terminal after accumulating data in bag file
+python bag2csv.py
+
 #testservont.py is the file the controls the car
 rosrun teleop_twist_joy testservont.py
 

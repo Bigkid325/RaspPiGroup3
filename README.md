@@ -3,6 +3,7 @@ Dr. Bai's Raspberry Pi Class Group 3
 ### To Run
 
 ```bash
+#link https://github.com/Bigkid325/RaspPiGroup3/tree/master
 git clone https://github.com/Bigkid325/RaspPiGroup3
 
 # launch teleop joy node
@@ -17,14 +18,6 @@ roslaunch teleop.launch
 cd RaspPiGroup3/teleop_ws
 source ./devel/setup.bash
 
-#in controller terminal:
-cd RaspPiGroup3
-mkdir ~/bagfiles
-cd ~/bagfiles
-rosbag record -a
-
-#run bag2csv.py file in controller terminal after accumulating data in bag file
-python bag2csv.py
 
 #testservont.py is the file the controls the car
 rosrun teleop_twist_joy testservont.py

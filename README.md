@@ -12,7 +12,7 @@ sudo rm -r build/ devel/
 catkin_make
 source ./devel/setup.bash
 ```
-### To Run on same machine
+### To have subscriber and publisher on same machine
 ```bash
 cd src/teleop_twist_joy/launch
 roslaunch teleop.launch
@@ -28,7 +28,7 @@ rosrun teleop_twist_joy controller.py
 #testservont.py is the subscriber code
 rosrun teleop_twist_joy testservont.py
 ```
-### To control on different machines
+### To have subscriber and publisher on different machine
 ```bash
 #On Machine A (publisher / controller)
 #First clone repo and follow directions above
@@ -47,4 +47,5 @@ rosrun teleop_twist_joy testservont.py
  
  ```
 ### Sample output csv located in ~/teleop_ws/out.csv
+A csv file is automatically created and starts saving data as soon as the program starts. It is saved as out.csv
 Click [here](https://github.com/Bigkid325/RaspPiGroup3/blob/master/teleop_ws/out.csv) to go to sample csv file

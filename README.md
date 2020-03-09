@@ -23,5 +23,17 @@ source ./devel/setup.bash
 rosrun teleop_twist_joy controller.py
 
 #testservont.py is the subscriber code
-
+rosrun teleop_twist_joy testservont.py
 ```
+### To control on different machines
+On Machine A (publisher / controller)
+run:
+ export ROS_MASTER_URI=http://{ip_of_machine_A}
+ export ROS_IP={ip_of_machine_A}
+ roslaunch teleop.launch
+ rosrun teleop_twist_joy controller.py
+
+On machine B (the subscriber / robot)
+ export ROS_MASTER_URI=http://{ip_of_machine_B}
+ export ROS_IP={ip_of_machine_B}
+ rosrun teleop_twist_joy testservont.py

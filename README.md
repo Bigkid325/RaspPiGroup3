@@ -3,6 +3,7 @@ Dr. Bai's Raspberry Pi Class Group 3
 ### To Run
 
 ```bash
+#link https://github.com/Bigkid325/RaspPiGroup3/tree/master
 git clone https://github.com/Bigkid325/RaspPiGroup3
 
 # launch teleop joy node

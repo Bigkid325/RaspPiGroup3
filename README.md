@@ -33,7 +33,7 @@ rosrun teleop_twist_joy testservont.py
 #On Machine A (publisher / controller)
 #First clone repo and follow directions above
 #run:
- export ROS_MASTER_URI=http://{ip_of_machine_A}
+ export ROS_MASTER_URI=http://{ip_of_machine_A}:11311
  export ROS_IP={ip_of_machine_A}
  roslaunch teleop.launch
  rosrun teleop_twist_joy controller.py
@@ -41,7 +41,7 @@ rosrun teleop_twist_joy testservont.py
 #On machine B (the subscriber / robot)
 #First clone repo and follow directions above
 #run:
- export ROS_MASTER_URI=http://{ip_of_machine_A}
+ export ROS_MASTER_URI=http://{ip_of_machine_A}:11311
  export ROS_IP={ip_of_machine_B}
  rosrun teleop_twist_joy testservont.py
  

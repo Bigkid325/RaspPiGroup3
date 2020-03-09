@@ -10,22 +10,12 @@ pub = rospy.Publisher('cardata', String, queue_size=10)
 temp = {"speed":0.15,"direction":0.15}
 csv = {"speed":[],"direction":[],"time":[]}
 df = pd.DataFrame(csv)
-# from rpiHAT import ServoNT
 
-# direction =ServoNT(channel=1, freq=96.5)
-# speed = ServoNT(channel=2, freq=96.5)
 
 
 def scale (unscaledNum, minAllowed, maxAllowed, min, max):
   return (maxAllowed - minAllowed) * (unscaledNum - min) / (max - min) + minAllowed
 
-# def driveCallback(data, args):
-#     #check the arugment to pulse to the appropriate channel
-#     #data.data is a float32 and the pulse width
-#     if args == "direction":
-#         direction.pulse(data.data)
-#     elif args == "speed":
-#         speed.pulse(data.data)
         
     
 
@@ -33,7 +23,6 @@ def scale (unscaledNum, minAllowed, maxAllowed, min, max):
 
 def callback(data):
 
-    #print(data)
     yd = data.axes[1]
     xd = data.axes[0]
     mv = data.buttons[7]
@@ -45,22 +34,21 @@ def callback(data):
     dataObj["direction"] = scale(xd,0.1,0.2,-1,1) 
     
     if dataObj["speed"] != temp["speed"] or dataObj["direction"] != temp["direction"]:
-        #send data
+        #send data if steering as changed
         pub.publish(json.dumps(dataObj))
         global df
+        #write to csv
         df = df.append({"speed":dataObj["speed"], "direction":dataObj["direction"],"time":str(datetime.now())},ignore_index=True)
         df.to_csv("out.csv",index=False)
 
 
-
-    global temp # do not delete because it breaks :( everythigng
+    #temp varaible to keep track of past steering
+    global temp 
     temp = dataObj
 
 def listener():
     rospy.init_node('motor_car', anonymous=True)
     rospy.Subscriber("joy", Joy, callback)
-    # rospy.Subscriber('direction', Float32, driveCallback, "direction")
-    # rospy.Subscriber('speed', Float32, driveCallback,  "speed")
     while not rospy.is_shutdown():
         time.sleep(0.1)
 

@@ -1,4 +1,4 @@
-# RaspPiGroup3
+# Racecar Project Homework 6
 Dr. Bai's Raspberry Pi Class Group 3
 ### To Run
 

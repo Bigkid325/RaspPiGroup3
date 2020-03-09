@@ -19,7 +19,9 @@ cd RaspPiGroup3/teleop_ws
 source ./devel/setup.bash
 
 
-#testservont.py is the file the controls the car
-rosrun teleop_twist_joy testservont.py
+#controller.py is the file the controls the car
+rosrun teleop_twist_joy controller.py
+
+#testservont.py is the subscriber code
 
 ```

@@ -1,0 +1,16 @@
+{
+    "type": "servo",
+    
+    "_": "shape of the image [width, height]",
+    "shape": [100, 100],
+    
+    "batch_size": 10,
+    "epochs": 1,
+    
+	"cuda": false,
+	"optimizer": "adam",
+	
+	"log_file": "log.json",
+	"log_dir": "log/",
+	"clean_start": false
+}

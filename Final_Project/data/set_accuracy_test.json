@@ -1,0 +1,11 @@
+{
+    "_": "shape of the image [width, height]",
+    "shape": [100, 100],
+    "depth": 3,
+
+    "error_margin": 2,
+    
+    "servo_setting": "data/set_servo_test.json",
+    
+    "servo_model": "models/servo_model.pth"
+}

@@ -11,6 +11,7 @@ python raceCarModel.py
 #Test Accuracy
 python rcCarAcuracy.py
 ```
-#### Sample output 
+####  Accuracy output 
+![image](/Final_Project/Screenshots/DeepinScreenshot_select-area_20200430203414.png)
 
 ### Copy files to your Raspberry Pi

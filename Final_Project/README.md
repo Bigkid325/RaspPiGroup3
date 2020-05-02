@@ -1,5 +1,6 @@
 
-### Train Your model
+## Train Your model
+
 ```bash 
 git clone https://github.com/Bigkid325/RaspPiGroup3
 
@@ -16,7 +17,8 @@ python rcCarAcuracy.py
 
 #### Total accumulated loss
 ![image](/Final_Project/Screenshots/DeepinScreenshot_select-area_20200502130939.png)
-### Copy files to your Raspberry Pi
+
+## Copy files to your Raspberry Pi
 
 #### On your Raspberry Pi
 ```bash

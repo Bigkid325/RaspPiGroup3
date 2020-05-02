@@ -14,6 +14,8 @@ python rcCarAcuracy.py
 ####  Accuracy output 
 ![image](/Final_Project/Screenshots/DeepinScreenshot_select-area_20200430203508.png)
 
+#### Total accumulated loss
+![image](/Final_Project/Screenshots/DeepinScreenshot_select-area_20200502130939.png)
 ### Copy files to your Raspberry Pi
 
 #### On your Raspberry Pi

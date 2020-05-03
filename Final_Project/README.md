@@ -24,6 +24,9 @@ python rcCarAcuracy.py
 ```bash
 git clone git clone https://github.com/Bigkid325/RaspPiGroup3
 ```
+Copy your trained model from your computer to the Raspberry Pi and place it in
+the models folder. This can be done using scp or rsync on the command line or another tool.
+
 #### Install torch and Torchvision
 
 ```

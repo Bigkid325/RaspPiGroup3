@@ -1,4 +1,6 @@
 
+https://github.com/Bigkid325/RaspPiGroup3/tree/master/Final_Project
+
 ## Train Your model
 
 ```bash 
